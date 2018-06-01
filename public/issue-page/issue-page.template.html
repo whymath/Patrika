@@ -1,0 +1,24 @@
+<div>
+  <div flex-xs flex-gt-xs="100"
+        layout="row"
+        class='md-padding'
+        layout="row"
+        layout-align="center"
+        flex-offset-sm="0"
+        flex-offset-md="0"
+        flex-offset-lg="0"
+        flex-offset-gt-lg="0"
+        layout-wrap ng-show="$ctrl.show">
+    <md-card ng-repeat="issueArticle in $ctrl.issueArticles">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{issueArticle.title}}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-actions layout="row" layout-align="end center">
+        <!--md-button ng-click="$ctrl.viewArticleListener(articleId)">View Article</md-button-->
+        <md-button><a href="#!/articles/{{issueArticle.articleId}}">View Article</a></md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>
