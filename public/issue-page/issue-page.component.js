@@ -8,6 +8,7 @@ angular.
       function issuePageController($routeParams, $route, Articles) {
 
         var self = this;
+        var articlesList = [];
 
         self.options = {
           largeEditDialog: false,
@@ -17,7 +18,17 @@ angular.
         };
 
         Articles.getArticlesByIssue($routeParams.issueNo).then(function(response) {
-            self.issueArticles = response.data.sort();
+          // Yohan to check whole method
+          console.log("Printing response object = ", response);
+
+          for (var i = 0; i < response.data.length; i++) {
+            //console.log("Printing response.data[i] object = ", response.data[i]);
+            articlesList.push(response.data[i]);
+            //console.log("Printing interim articlesList object = ", articlesList);
+          }
+
+          self.issueArticles = articlesList;
+          console.log("Printing final issueArticles object = ", issueArticles);
         });
       }
     ]

@@ -7,18 +7,17 @@
         flex-offset-sm="0"
         flex-offset-md="0"
         flex-offset-lg="0"
-        flex-offset-gt-lg="0"
-        layout-wrap ng-show="$ctrl.show">
-    <md-card ng-repeat="issueNo in $ctrl.issueNos">
+        flex-offset-gt-lg="0">
+    <md-card ng-repeat="issue in $ctrl.issues">
       <md-card-title>
         <md-card-title-text>
-          <span class="md-headline">Issue {{issueNo}}</span>
+          <span class="md-headline">Issue {{issue.issueNo}}</span>
         </md-card-title-text>
       </md-card-title>
       <md-card-actions layout="row" layout-align="end center">
-        <md-button ng-click="$ctrl.viewPdfListener(issueNo)">View as PDF</md-button>
+        <md-button ng-click="$ctrl.viewPdfListener(issue.issueNo)">View as PDF</md-button>
         <!--md-button ng-click="$ctrl.viewArticlesListener(issueNo)">View Articles</md-button-->
-        <md-button><a href="#!/issues/{{issueNo}}">View Articles</a></md-button>
+        <md-button><a href="#!/issues/{{issue.issueNo}}">View Articles</a></md-button>
       </md-card-actions>
     </md-card>
   </div>

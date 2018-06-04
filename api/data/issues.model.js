@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 //var articles = mongoose.model('articles', articleSchema);
 
 var issueSchema = new mongoose.Schema({
-  issueno: {
-    type: Number,
+  issueNo: {
+    type: Number
     //required: true
   },
   articles: {
