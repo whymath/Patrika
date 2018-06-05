@@ -13,9 +13,11 @@ module.exports.getArticlesByIssue = function(req, res) {
         console.log("Error finding Articles", err);
         res.status(500).json(err);
         } else {
-          console.log(allArticles.length);
+          console.log("Total no. of Articles = ", allArticles.length);
+          console.log("Issue No. = ", req.params.issueNo);
 
           for(var i = 0 ; i < allArticles.length; i++) {
+            console.log("Checking Issue No. = ", allArticles[i].issueNo);
             if (req.params.issueNo == allArticles[i].issueNo) {
               currIssueArticles.push(allArticles[i]);
             }
@@ -38,9 +40,10 @@ module.exports.getArticle = function(req, res) {
         console.log("Error finding Articles", err);
         res.status(500).json(err);
         } else {
-          console.log(allArticles.length);
+          console.log("Total no. of articles = ", allArticles.length);
 
           for(var i = 0 ; i < allArticles.length; i++) {
+            console.log("Checking Article ID = ", allArticles[i].articleId);
             if (req.params.articleId == allArticles[i].articleId) {
               currArticle = allArticles[i];
             }

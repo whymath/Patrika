@@ -21,7 +21,7 @@ angular.
       }
 
       function getArticle(articleId) {
-        return $http.get('/api/getArticlesByIssue/'+articleId).then(complete).catch(failed);
+        return $http.get('/api/getArticle/'+articleId).then(complete).catch(failed);
       }
 
       function complete(response) {

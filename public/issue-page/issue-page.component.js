@@ -19,7 +19,7 @@ angular.
 
         Articles.getArticlesByIssue($routeParams.issueNo).then(function(response) {
           // Yohan to check whole method
-          console.log("Printing response object = ", response);
+          console.log("Printing getArticlesByIssue() response = ", response);
 
           for (var i = 0; i < response.data.length; i++) {
             //console.log("Printing response.data[i] object = ", response.data[i]);

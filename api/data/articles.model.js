@@ -28,6 +28,9 @@ var articleSchema = new mongoose.Schema({
   },
   publishDate:{
     type: String
+  },
+  bodyText:{
+    type: String
   }
 });
 

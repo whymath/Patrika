@@ -10,7 +10,7 @@ module.exports.getIssues = function(req, res) {
         console.log("Error finding Issues", err);
         res.status(500).json(err);
         } else {
-          console.log(issuesList.length);
+          console.log("Total no. of Issues = ", issuesList.length);
           // Yohan check
           res.status(200).json(issuesList);
         }
