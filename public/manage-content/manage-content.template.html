@@ -1,0 +1,61 @@
+<div>
+	<div layout="row">
+		<div flex="5"></div>
+		<div flex>
+			<div layout="column">
+				<h1>
+					<font face="verdana">Select which checkouts need to be made</font>
+				</h1>
+				<div>
+					<md-checkbox ng-model="link.checked" ng-disabled="link.disabled" ng-repeat="link in $ctrl.svnLinks">
+						{{link.name}}
+					</md-checkbox>
+				</div>
+				<div layout="row">
+					<div flex="15">
+						<md-input-container>
+							<label>oradev username</label>
+							<input ng-model="$ctrl.downloadSVN.username">
+						</md-input-container>
+					</div>
+					<div flex="15">
+						<md-input-container>
+							<label>oradev password</label>
+							<input ng-model="$ctrl.downloadSVN.password" type="password">
+						</md-input-container>
+					</div>
+					<div flex="25">
+						<md-button class="md-raised md-primary" ng-click="$ctrl.setupLinks()">Setup Framework</md-button>
+					</div>
+					<div flex>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h1>
+							<font face="verdana">Add SVN Checkout Link</font>
+						</h1>
+					</div>
+					<div layout="column">
+						<md-input-container>
+							<label>Name</label>
+							<input ng-model="$ctrl.name">
+						</md-input-container>
+						<md-input-container>
+							<label>Link</label>
+							<input ng-model="$ctrl.link">
+						</md-input-container>
+						<md-input-container>
+							<label>To Be Checked out as</label>
+							<input ng-model="$ctrl.checkout">
+						</md-input-container>
+					</div>
+					<div>
+						<md-button class="md-raised md-primary">Add Checkout Link</md-button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div flex="10"></div>
+	</div>
+</div>
